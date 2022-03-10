@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Funções - funções anônimas e wrapper</title>
+
+	<script>
+		// var exibirSaudacao = function(nome) {
+		// 	document.write('Olá ' + nome + " , tudo bem?")
+		// }
+
+		// exibirSaudacao('Sandro')
+		
+		//CALLBACK
+		function exibirArtigo(idm callbackSucesso, callbackErro) {
+			//recuperar id via requisição http
+			if (true) {
+				callbackSucesso('Funções de callback em JS', 'Funções de callback são muito requisitadas...')
+			} else {
+				callbackEerro('Erro ao recuperar os dados')
+
+			}
+		}
+
+		var callbackSucesso = function(titulo, descricao){
+			document.write('<h1>' + titulo + '</h1>')
+			document.write('<hr />')
+			document.write('<p>' + descricao + '</p>')
+		}
+
+		var callbackEerro = function(erro) {
+			document.write('<p><b>Erro:</b>' + erro + '</p>')
+
+		}
+
+		exibirArtigo(1, callbackSucesso, callbackErro)
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

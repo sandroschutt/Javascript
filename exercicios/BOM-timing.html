@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<!-- 
+DOCUMENTAÇÃO:
+setTimeout()
+https://www.w3schools.com/jsref/met_win_settimeout.asp
+
+setInterval()
+https://www.w3schools.com/jsref/met_win_setinterval.asp
+
+ -->
+<head>
+	<meta charset="utf-8">
+	<title>BOM - Timing</title>
+	<script>
+		//Executa ação uma vez após o tempo informado
+		//setTimeout(<ação>, <tempo em milissegundos>);
+		//clearTimeout()
+		// setTimeout(function(){document.write('teste')}, 2000)
+		// clearTimeout()
+
+		//Sempre executa a ação após o período informado
+		//setInterval(<ação>, <tempo em milissegundos>);
+		//clearInterval()
+		var i = 5
+		var x = setInterval(function(){
+			document.write(i)
+			i--
+
+			if(i === 0) {
+				clearInterval(x)
+			}
+		}, 1000)
+		
+
+	</script>
+</head>
+
+
+<body>
+	<h1>BOM - Timing</h1>
+
+	
+</body>
+</html>

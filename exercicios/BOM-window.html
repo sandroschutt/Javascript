@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<!-- 
+DOCUMENTAÇÃO:
+https://www.w3schools.com/js/js_window.asp
+ -->
+<head>
+	<meta charset="utf-8">
+	<title>BOM - window</title>
+
+	<script>
+		var janela = null
+
+		function abrirPopUp() {
+			janela = window.open('https://www.google.com', 'nova janela', 'width=200, height=200')
+		}
+
+		function fecharPopUp() {
+			janela.close()
+		}
+	</script>
+</head>
+<body>
+	<button onclick="abrirPopUp()">Arbrir janela</button>
+	<button onclick="fecharPopUp()">Fechar janela</button>
+	<button onclick="window.print()">Imprimir página</button>
+</body>
+</html>

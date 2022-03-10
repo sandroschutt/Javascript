@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<!-- 
+DOCUMENTAÇÃO:
+https://www.w3schools.com/js/js_window_screen.asp
+ -->
+<head>
+	<meta charset="utf-8">
+	<title>BOM - screen</title>
+
+	<script>
+		//availHeight & availWidth = potencial de dimensões do browser
+		var altura = window.screen.availHeight
+		var largura = window.screen.availWidth
+
+		// document.write('Altura: ' + altura + '<br />')
+		// document.write('Largura: ' + largura)
+
+		if(largura < 500) {
+			document.write('lógica para impressão do menu versão mobile')
+		} else{
+			document.write('lógica para impressão do menu versão web')
+		}
+	</script>
+</head>
+
+
+<body>
+	
+</body>
+</html>

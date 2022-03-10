@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+	<script>
+		//true && true && false = false
+		//AND (falso se um resultado for falso)
+		// if (2 == 2 && 3 >= 1 && "a" == "b") {
+		// 	document.write('Verdadeiro   ')
+		// } else {
+		// 	document.write('Falso   ')
+		// }
+
+		//true || true || false = true
+		//OU (verdadeiro se um resultado for verdadeiro)
+		// if (2 == 2 || 3 >= 1 || "a" == "b") {
+		// 	document.write('Verdadeiro   ')
+		// } else {
+		// 	document.write('Falso   ')
+		// }
+
+		//false = false
+		//NEGAÇÃO (inverte o resultado lógico)
+		// if (!(4 == 2)) {
+		// 	document.write('Verdadeiro   ')
+		// } else {
+		// 	document.write('Falso   ')
+		// }
+
+		var nota = prompt('Digite a nota do aluno: ')
+		var faltas = prompt('Digite a quantidade de faltas:  ')
+		
+		var media = 7
+		var faltasMaximas = 15
+
+		// if (nota >= media && faltas <= faltasMaximas) {
+		// 	document.write('Aprovado')
+		// } else {
+		// 	document.write('Reprovado')
+		// }
+
+
+		//OPERADOR TERNÁRIO
+		//estrutura semelhante ao if-else mas escrita de forma mais simples. Usada apenas para trabalhar dados numéricos e strings
+		// var resultado = <condicao> ? <verdadeiro> : <falso>
+
+		var resultado = nota >= media && faltas <= faltasMaximas ? 'Aprovado ' : 'Reprovado '
+		document.write(resultado)
+
+	</script>
+	
+	<!--
+	OPERADORES LÓGICOS
+	--------------------------------
+	--------------------------------
+	E (&&) - verdadeiro se todas as expressões forem verdadeiras
+	OU (||) - verdadeiro se pelo menos uma das expressões for verdadeira
+	Negação (!) - inverte o resultado da expressão de comparação
+	-->
+
+</head>
+
+<body>
+	
+
+
+</body>
+</html>

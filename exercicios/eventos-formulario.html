@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Eventos - Formulários</title>
+
+	<script>
+		function acao() {
+			alert('evento disparado')
+		}
+
+	</script>
+</head>
+
+<body>
+	<!-- ON FOCUS
+		(dispara ao focar no elemento do formulário)
+	-->
+	<input onfocus="console.log('evento disparado')" type="text" name="">
+	<br>
+
+	<!-- ON CHANGE
+		(dispara se o estado do elemento do formulário dor modificado)
+	 -->
+	<select onchange="console.log('Estado foi modificado')">
+		<option>-- Selecione --</option>
+		<option value="1">Primeira opção</option>
+		<option value="2">Segunda opção</option>
+	</select>
+	<br>
+</body>
+</html>

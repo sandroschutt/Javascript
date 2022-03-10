@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Arrays - ordenação de elementos</title>
+
+	<script>
+		var listaFrutas = Array()
+
+		listaFrutas[0] = 'uva'
+		listaFrutas[1] = 'morango'
+		listaFrutas[2] = 'banana'
+		listaFrutas[3] = 'maçã'
+
+		var listaNumeros = Array()
+
+		listaNumeros[0] = 12
+		listaNumeros[1] = 43
+		listaNumeros[2] = 26
+		listaNumeros[3] = 7
+		listaNumeros[4] = 3
+
+
+		//o método .sort() é específico para ordenações alfanuméricas
+		console.log(listaFrutas.sort()) //ordena corretamente
+
+		console.log(listaNumeros.sort())
+		//ordena incorretamente
+		//o metodo sort trata todos os dados como string, por isso gera o erro como no exemplo acima
+
+		//para corrigir isso:
+		function ordenaNumeros(a, b) {
+			return a - b
+			// < 0 - a ordenado antes de b
+			// > 0 - b ordenado antes de a
+			// == a ordem é mantida
+		}
+
+		console.log(listaNumeros.sort(ordenaNumeros))
+
+		
+
+
+	</script>
+</head>
+
+
+<body>
+
+</body>
+</html>

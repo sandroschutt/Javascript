@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<!-- 
+DOCUMENTAÇÃO
+https://www.w3schools.com/js/js_date_methods.asp
+ -->
+
+<head>
+	<meta charset="utf-8">
+	<title>Funções nativas para manipulação de datas</title>
+
+	<script>
+		var data = new Date()
+
+		// document.write(data.getDate() + '/' + (data.getMonth() + 1) +'/' + data.getFullYear())
+
+		//o '+ 1 ' é colocado em getMonth() pq o contador dessa função começa em 0, então para ajustar a informação do mês adequadamente precisamos adicionar 1 ao contador.
+
+		//16/07/2021
+
+
+		//adicionar ou remover dias da data
+		// document.write(data.toString())
+
+		//altera dia
+		// data.setDate(data.getDate() + 366)
+
+		//alltera mês
+		// data.setMonth(data.getMonth() + 1)
+
+		//altera ano
+		// data.setFullYear(data.getFullYear() + 1)
+
+
+		//o operador '+' adiciona os valores definidos ao contador. Outros operadores também alteram os valores
+
+
+		// document.write('<hr />')
+		// document.write(data.toString())
+
+
+		//QUANTOS DIAS EXISTEM ENTRE AS DUAS DATAS
+		//15/01/2017 >>> 23/02/2017
+
+		var data1 = new Date(2017, 0, 15) // janeiro é o mês 0
+
+		var data2 = new Date(2017, 1, 23) //fevereiro é o mês zero
+
+		// | 0 | 1 | 2 | 3 | 4 | 5 | 5 | 7 ...
+		// |JAN|FEV|MAR|ABR|MAI|JUN|JUL|AGO...
+
+		document.write(data1.toString())
+		document.write('<hr />')
+		document.write(data2.toString())
+
+		document.write('<br /> <br /> <hr />')
+
+		//converter data p/ algo que possamos calcular
+
+		
+		//(1)
+		//getTime(): 1 de janeiro de 1970 até a data definida
+		var time1 = data1.getTime()
+		document.write(time1)
+		document.write('<hr />')
+		var time2 = data2.getTime()
+		document.write(time2)
+
+		//(2)
+		//encontrar a qtde de milissegundos entre data1 e data2
+
+		// if (time1 > time2) {
+		// 	var diferenca = time1 - time2
+		// } else if (time1 < time2) {
+		// 	var diferenca = time2 - time1
+		// }
+
+		// document.write('<br /> <br /> Diferença: ' + diferenca)
+
+		document.write('<br />')
+		var dif = Math.abs(data1.getTime() - data2.getTime())
+		document.write('Dif: ' + dif)
+
+		//cada dia tem 24h; cada hora 60min; cada min 60seg; cada seg 1000ms
+		//qts ms em um dia?
+		//1min = 60k; 1h = 3.6mi; 1d = 86.400.000
+		// var milissegundos_por dia = (24 * (60 * (60 * 1000)))
+		// document.write('<br /><br />Segundo = 1000ms; Minuto = ' + (1000*60) + 'ms; Hora = ' + (60*(1000*60)) + 'ms; Dia = ' + (24*(60*(1000*60))) + 'ms.')
+
+		 document.write('<br /> <br /> <hr />')
+		 var milissegundos_por_dia = (1*24*60*60*1000)
+		 var totalDias = dif/milissegundos_por_dia
+		 document.write('Diferença de dias: ' + Math.ceil(totalDias))
+
+
+		
+
+
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>
