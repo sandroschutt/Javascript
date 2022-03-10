@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Exercícios DOM</title>
+	</head>
+	<style>
+		#alteraBG {
+			background: blue;
+			color: white;
+			font-weight: bold;
+			height: 75px;
+			width: 250px;
+		}
+	</style>
+
+	<script>
+		/*
+		Write a JavaScript program to set the background color of a paragraph
+		*/
+
+		function js_style(){
+			document.getElementById('text').id = "alteraBG"
+		}
+		
+	</script>
+
+	<body>
+		<h1>Exercícios com manipulação do DOM</h1>
+
+		<p id ='text'>JavaScript Exercises - w3resource</p> 
+		<div>
+		<button id="jsstyle" onclick="js_style()">Altera BG</button>
+		</div>
+	</body>
+</html>

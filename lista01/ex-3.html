@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript - lista 01 - ex 03</title>
+	<script>
+		//3 – Peça ao usuário para digitar 5 números em uma caixa de texto. Verifique qual é o maior número e exiba-o.
+
+		var listaNumeros = Array()
+		var contador = 0
+
+
+		function pegaNumero(){
+			listaNumeros[contador] = parseInt(document.getElementById('numeros').value)
+			console.log('valor: ' + listaNumeros[contador])
+			console.log(document.getElementById('numeros').value = '')
+			console.log('Lista: ' + listaNumeros)
+			console.log('contador: ' + contador)
+
+			if(contador == 4){
+				listaNumeros.sort()
+				console.log(listaNumeros)
+
+				document.write('Maior número: ' + listaNumeros[contador])
+			}
+
+			contador++
+		}
+	</script>
+</head>
+
+
+<body>
+	<p>Digite cinco números: </p>
+	<input onkeyup="pegaNumero()" id="numeros" type="number" placeholder="Digite aqui"></input>
+</body>
+</html>

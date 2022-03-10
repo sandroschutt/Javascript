@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script>
+        // Exercício – Parâmetros em Arrow Function
+        // fonte: https://www.mundojs.com.br/2020/09/02/exercicio-facil-parametros-em-arrow-function/
+
+        //FUNÇÕES
+        //PT1
+        //função comum
+        function comum(name, lastName){
+            console.log(`Olá ${name} ${lastName}, eu sou uma função!`)
+        }
+
+        let name = 'João'
+        let lastName = 'Surubeiro'
+
+        console.log('Função comum: ')
+        comum(name, lastName)
+
+
+        console.log('Função arrow: ')
+        //função arrow
+        let saudacao;
+        saudacao = () => `Olá ${name} ${lastName}, eu sou uma função!`
+
+        console.log(saudacao())
+
+
+        //PT2
+        //função comum
+        function descobreDiametro(raio, diametro){
+            diametro = raio * 2
+            let diametroReal = diametro
+            console.log(`Diâmetro: ${diametroReal}`)
+        }
+
+        //função arrow
+        let arrowDiametro;
+        arrowDiametro = () => console.log(`Diâmetro arrow: ${raio * 2}`)
+
+        let raio = 2
+        let diametro;
+
+        descobreDiametro(raio, diametro)
+        arrowDiametro()
+
+
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+</html>

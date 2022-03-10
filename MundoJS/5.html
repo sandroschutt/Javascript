@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script>
+        // Exercício – Maior espaço entre letras
+        // fonte: https://www.mundojs.com.br/2020/10/12/exercicio-maior-espaco-entre-letras/
+
+        //FUNÇÕES
+        function contarDecrescente(n){
+            if(n < 1){
+                let retorno = console.log(`Lista vazia: ${listaVazia}`)
+                return retorno;
+             } else {
+                n = n - 1
+                listaVazia.push(n)
+                contarDecrescente(n)
+            }
+        }
+
+
+        let n = parseInt(prompt('informe um número: '))
+
+        let listaVazia = Array()
+        listaVazia.push(n)
+
+        contarDecrescente(n)
+        // console.log(listaVazia)
+        
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+</html>

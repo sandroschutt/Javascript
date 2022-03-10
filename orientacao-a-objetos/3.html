@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex3</title>
+	<script>
+		//fonte: http://www.decom.ufop.br/romildo/bcc221.2011-1/poo-1-classes.pdf
+
+		/*
+		A fim de representar empregados em uma firma, crie uma classe chamada Empregado que inclui as três informações a seguir como atributos:
+
+		• um primeiro nome,
+		• um sobrenome, e
+		• um salário mensal.
+
+		Sua classe deve ter um construtor que inicializa os três atributos. Forneça um método set e get para cada
+		atributo. Se o salário mensal não for positivo, configure-o como 0.0. Escreva um aplicativo de teste que
+		demonstra as capacidades da classe. Crie duas instâncias da classe e exiba o salário anual de cada instância.
+		Então dê a cada empregado um aumento de 10% e exiba novamente o salário anual de cada empregado.
+		*/
+
+		class Empregado{
+			constructor(){
+				this.primeiroNome;
+				this.sobrenome;
+				this.salario;
+			}
+
+			get defPrimeiroNome(){
+				return this.primeiroNome;
+			}
+
+			set defPrimeiroNome(primeiroNome){
+				this.primeiroNome = primeiroNome;
+			}
+
+
+			get defSobrenome(){
+				return this.sobrenome;
+			}
+
+			set defSobrenome(esseSobrenome){
+				this.sobrenome = esseSobrenome;
+			}
+
+
+			get defSalario(){
+				return this.salario;
+			}
+
+			set defSalario(esseSalario){
+				this.salario = esseSalario;
+				if(this.salario < 0){this.salario = 0.0}
+			}
+
+			salarioAnual(){
+				let salarioAnual = parseFloat(this.salario) * 12
+				console.log(`Salário anual: R$${salarioAnual}`)
+			}
+
+			aumento10(){
+				let aumento = parseFloat(this.salario) * 0.1
+				let salarioComAumento10 = parseFloat(this.salario) + aumento
+				console.log(`Valor do salário com aumento de 10%: R$${salarioComAumento10}`)
+			}
+		}
+
+		//EMPREGADO A
+		let empregadoA = new Empregado()
+		empregadoA.defPrimeiroNome = "Putencio"
+		empregadoA.defSobrenome = "Bucetácius"
+		empregadoA.defSalario = "1500.0"
+		console.log(`FUNCIONÁRIO A:\nNome: ${empregadoA.primeiroNome} ${empregadoA.sobrenome}\nSalário: ${empregadoA.salario}`)
+		empregadoA.salarioAnual()
+		empregadoA.aumento10()
+
+		//EMPREGADO B
+		let empregadoB = new Empregado()
+		empregadoB.defPrimeiroNome = "Surubus"
+		empregadoB.defSobrenome = "Burutucus"
+		empregadoB.defSalario = "2500.0"
+		console.log(`FUNCIONÁRIO B:\nNome: ${empregadoB.primeiroNome} ${empregadoB.sobrenome}\nSalário: ${empregadoB.salario}`)
+		empregadoB.salarioAnual()
+		empregadoB.aumento10()
+
+		
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

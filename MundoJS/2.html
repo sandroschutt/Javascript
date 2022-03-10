@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script>
+        // Exercício – letras repetidas (encontra letra isolada)
+        // fonte: https://www.mundojs.com.br/2020/10/26/exercicio-letras-repetidas/
+
+        //FUNCÇÕES
+        function ordena(vetorOrdenado){
+            let odd = ''
+            var x = 0
+
+            while(x <= 5){
+                let atual = vetorOrdenado[x]
+                let proximo = vetorOrdenado[x + 1]
+                // console.log(`próximo: ${proximo}`)
+
+                if(proximo !== undefined){
+                    if(atual !== proximo){
+                        odd = proximo
+                    }
+                }
+
+                x++
+            }
+
+            console.log(`Letra isolada: ${odd}`)
+                      
+        }
+
+        /*-----------------------------------------*/
+
+        let vetor = ["a", "b", "a", "a", "c", "b"]
+
+        let vetorOrdenado = vetor.sort()
+
+        console.log(`Vetor ordenado: ${vetorOrdenado}`)
+
+        ordena(vetorOrdenado)
+
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+</html>

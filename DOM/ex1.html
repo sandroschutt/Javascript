@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Exercícios DOM</title>
+	</head>
+	<style></style>
+
+	<script>
+		/*
+		modify the style of the paragraph text through javascript code
+		*/
+
+		function js_style(){
+			document.getElementById('text').innerHTML = "O html interno de p foi alterado"
+		}
+		
+	</script>
+
+	<body>
+		<h1>Exercícios com manipulação do DOM</h1>
+
+		<p id ='text'>JavaScript Exercises - w3resource</p> 
+		<div>
+		<button id="jsstyle" onclick="js_style()">Style</button>
+		</div>
+	</body>
+</html>

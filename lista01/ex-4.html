@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript - lista 01 - ex 04</title>
+	<script>
+		//4 – Peça ao usuário para digitar várias idades. Exiba quantas pessoas são maior de idade (18 anos) e quantas são menores.
+
+		var listaMenores = Array()
+		var listaMaiores = Array()
+
+		function separaGruposDeIdade(){
+			var idade = parseInt(prompt('Digite uma idade: '))
+			if(idade < 18){
+			listaMenores.push(idade)
+			} else{
+				listaMaiores.push(idade)
+			}
+
+			var addIdade = prompt('Deseja informar mais idades (s/n)?')
+			if(addIdade == 's'){
+				separaGruposDeIdade()
+			} else{
+				document.write(listaMenores.length + ' pessoas são menores de idade.' + '<br />')
+				document.write(listaMaiores.length + ' pessoas são maiores de idade.')
+			}
+		}
+
+		console.log(listaMenores)
+		console.log(listaMaiores)
+
+		separaGruposDeIdade()
+	</script>
+</head>
+
+
+<body>
+	
+</body>
+</html>

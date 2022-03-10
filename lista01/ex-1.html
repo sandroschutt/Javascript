@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript - lista 01 - ex 01</title>
+	<script>
+		//1 – Calcule a média de diversas notas digitadas pelo usuário.
+		var leNota = []
+		var novaNota = true
+
+		function processaNotas(){
+			var nota = prompt('Informe uma nota: ')
+			validaNota(nota)
+		}
+
+		function validaNota(nota){
+
+			if(nota == ''){
+				alert('Número inválido')
+				processaNotas()
+			} else if(nota <= 10 && nota >=0) {
+				leNota.push(nota)
+				alert('Nota inserida')
+			} else {
+				alert('Número inválido')
+				processaNotas()
+			}
+
+			var insertNew = prompt('Deseja informar mais uma nota (s/n)? ')
+
+			if(insertNew == 's'){
+				processaNotas()
+			} else {
+				alert('Entrada de dados encerrada')
+				novaNota = false
+			}
+		}
+
+		function calculaNota(){			
+			var soma = 0
+			var i = 0
+			while(i < leNota.length){
+				soma += parseFloat(leNota[i])
+				i++
+			}
+			
+			var media = soma / leNota.length
+			alert('Média: ' + media)
+			console.log('Soma das notas: ' + soma)
+			console.log('Média: ' + media)
+		}
+
+		while(novaNota == true) {
+			processaNotas()
+		}
+
+		calculaNota()
+
+		for(var x = 0; x <= leNota.length; x++){
+			document.write('Nota ' + (x + 1) + ': ' + leNota[x] + '<br />')
+		}
+
+		console.log(leNota)
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

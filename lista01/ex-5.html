@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript - lista 01 - ex 05</title>
+	<script>
+		//5 – Crie um programa que entre com os dados de altura e sexo de 5 pessoas. Imprima na tela quantas pessoas são do sexo masculino e quantas pessoas são do sexo feminino. Mostre também qual é a maior altura e se essa altura é de um homem ou uma mulher.
+
+		var homens = []
+		var mulheres = []
+		var listaAltura = []
+
+		function organizaGruposPessoas(){
+			//PROCESSAMENTO DE DADOS
+			var contador = 0
+			while(contador < 5){
+				var sexo = prompt('Informe o sexo da pessoa (m/f):')
+				validaSexo(sexo)
+				var altura = parseInt(prompt('Informe a altura da pessoa (cm): '))
+				listaAltura.push(altura)
+				listaAltura.sort()
+
+				var limiteArray = listaAltura.length
+
+				if (altura == listaAltura[limiteArray - 1]){
+					var maiorAltura = altura
+					var maiorAlturaSexo = sexo
+				}
+				contador++
+			}
+
+			//SAÍDA DE DADOS
+			document.write('Nº de homens: ' + homens.length + '<br />')
+			document.write('Nº de mulheres: ' + mulheres.length + '<br />')
+
+			document.write('Maior altura: ' + maiorAltura + '<br />')
+			document.write('Sexo: ' + maiorAlturaSexo)
+		}
+
+		function validaSexo(sexo){
+			if(sexo == 'm'){
+				homens.push(sexo)
+			} else {
+				mulheres.push(sexo)
+			}
+		}
+
+		organizaGruposPessoas()
+	</script>
+</head>
+
+<body>
+</body>
+</html>

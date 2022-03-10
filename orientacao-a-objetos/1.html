@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+		//fonte: http://www.decom.ufop.br/romildo/bcc221.2011-1/poo-1-classes.pdf
+
+
+		//ex 1
+		
+		//Um carro é um veículo de transporte de pessoas e objetos que possuí 4 rodas, motor e lataria.
+
+		class Carro {
+			constructor(modelo, ano, motor, cambio, portas, portaMalas){
+				this.modelo = modelo
+				this.ano = ano
+				this.motor = motor
+				this.cambio = cambio
+				this.portas = portas
+				this.portaMalas = portaMalas
+				this.velocidade = 0
+				this.trancado = true
+				this.motorista = false
+				this.passageiro = false
+				this.carona = false
+				this.porta_abre_fecha = false
+				this.ligado = false
+				this.marcha = false
+			}
+
+			destrancarCarro(){
+				if(this.trancado == true){
+					let destrancaCarro = prompt('Deseja destrancar seu carro (s/n)?')
+					if(destrancaCarro == 's'){
+						this.trancado = false
+						console.log('Carro destrancado')
+					} else if(destrancaCarro == 'n'){
+						console.log('Carro trancado')
+					} else{
+						console.log('Comando inválido. Informe um comando válido')
+					}
+				} else{
+					console.log('Seu carro já está destrancado.')
+				}
+			}
+
+			trancarCarro(){
+				if(this.trancado == false){
+					let trancaCarro = prompt('Deseja trancar seu carro (s/n)?')
+					if(trancaCarro == 's'){
+						this.trancado = true
+						console.log('Carro trancado')
+					} else if(trancaCarro == 'n') {
+						console.log('Carro destrancado')
+					}else {
+						console.log('Comando inválido. Informe um comando válido')
+					}
+				} else{
+					console.log('Seu carro já está trancado.')
+				}
+			}
+
+			abrirPorta(){
+				console.log('Escolha a porta: ')
+				console.log(
+				' Motorista(1)\n\ Carona(2)\n\ Passageiro(3)\n\ PortaMalas(4)')
+				let escolhePorta = prompt('Informe a porta que deseja abrir: ')
+				let portaMotoristas = 1
+				let portaCarona = 2
+				let portaPassageiro = 3
+				let abrePortaMala = 4
+
+				if(this.trancado == false){
+					if(escolhePorta == 1){
+					console.log('Porta do motorista aberta')
+					this.porta_abre_fecha = true
+					} else if (escolhePorta == 2){
+						console.log('Porta do carona aberta')
+						this.porta_abre_fecha = true
+					} else if (escolhePorta == 3){
+						console.log('Porta do passageiro aberta')
+						this.porta_abre_fecha = true
+					} else if (escolhePorta == 4){
+						console.log('PortaMalas aberto')
+						this.porta_abre_fecha = true
+					} else{
+						console.log('Porta inválida. Selecione uma porta válida')
+					}
+				} else{
+					console.log('Seu carro ainda está trancado. Destranque-o antes de abrir a porta.')
+				}
+			}
+
+			entrarCarro(){
+				if(this.porta_abre_fecha == true){
+					let entrar = prompt('Deseja entrar no carro(s/n): ')
+					if(this.trancado == false){
+						if(entrar == 's'){
+							console.log('Você entrou no carro.')
+							this.motorista = true
+							this.carona = true
+							this.passageiro = true
+						} else if(entrar == 'n'){
+							console.log('Você não entrou no carro.')
+						} else{
+							console.log('Comando inválido. Informe um comando válido.')
+						}
+					} else{
+						console.log('Carro trancado. Destranque-o antes de entrar.')
+					}
+				} else{
+					console.log('Abra alguma porta antes de entrar no carro.')
+				}
+			}
+
+			sairCarro(){
+				if(this.motorista == true || this.carona == true || this.passageiro == true){
+					console.log('Você saiu do carro.')
+					this.motorista = false
+					this.carona = false
+					this.passageiro = false
+				}
+			}
+
+			ligarCarro(){
+				if(this.motorista == true || this.carona == true || this.passageiro == true){
+					if(this.ligado == false){
+						let ligar = prompt('Deseja ligar o carro (s/n)?')
+						if(ligar == 's'){
+							console.log('Carro ligado e pronto para partir.')
+							this.ligado = true
+						} else if(ligar == 'n'){
+							console.log('Você não ligou o carro...')
+						} else{
+							console.log('Comando inválido. Informe um comando válido')
+						}
+					}
+				} else{
+					console.log('Você precisa estar dentro do carro para ligá-lo.')
+				}
+			}
+
+			desligarCarro(){
+				if(this.ligado == true){
+					let desligar = prompt('Deseja desligar o carro (s/n)?')
+					if(desligar == 's'){
+						console.log('Carro desligado.')
+						this.ligado = false
+					} else if(desligar == 'n'){
+						console.log('O carro continua ligado')
+					} else{
+						console.log('Comando inválido. Informe um comando válido')
+					}
+				}
+			}
+
+			acelerar(){
+				if(this.ligado == true){
+					if(this.marcha == false){
+						console.log('Engatar marcha: ')
+						let marcha = prompt('Decida (s/n):')
+						if(marcha == 's'){
+							this.marcha = true
+							this.velocidade +=10
+							console.log(`Velocidade: ${this.velocidade}km/h`)
+						}
+					} else{
+						this.velocidade +=10
+						console.log(`Velocidade: ${this.velocidade}km/h`)
+					}
+				} else{
+					console.log('O carro precisa estar ligado para acelerar.')
+				}
+			}
+
+			frear(){
+				if(this.ligado == true){
+					console.log('freou')
+					this.velocidade -= 10
+					console.log(`Velocidade: ${this.velocidade}km/h`)
+				} else{
+					console.log('O carro precisa estar em movimento para frear.')
+				}
+			}
+
+			virar(){
+				if(this.ligado == true){
+					//definir angulo total e parcial para virar carro
+				}
+			}
+
+			buzinar(){
+				if(this.ligado == true){
+					console.log('Bip-bip!')
+				}
+			}
+
+			trocarMarcha(){
+				//precisa estar ligado
+				//
+			}
+
+		}
+
+		let carro = new Carro('Corsa', 1998, '1.0 fire', 6, 4, true)
+		let carro1 = new Carro('Uno', 2005, '1.0 mile', 6, 2, true)
+
+		console.log(carro)
+		console.log(carro1)
+		</script>
+
+	</head>
+
+
+	<body>
+
+	</body>
+</html>

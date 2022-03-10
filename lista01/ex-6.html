@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript - lista 01 - ex 06</title>
+	<script>
+		//6 – Peça ao usuário para digitar vários nomes. Exiba na tela todos os nomes digitados, porém de maneira invertida (do último para o primeiro).
+
+		var listaNomes = Array()
+
+		function calma() {
+			var nome = prompt('Informe um nome: ')
+				listaNomes.push(nome)
+
+			var insereNovo = prompt('Deseja informar outro nome (s/n)?')
+			if(insereNovo == 's'){
+				calma()
+			} else {
+				for(var i = listaNomes.length; i >= 0; i--){
+					document.write(listaNomes[i] + '<br />')
+				}
+			}
+		}
+
+		calma()
+	</script>
+</head>
+
+<body>
+</body>
+</html>

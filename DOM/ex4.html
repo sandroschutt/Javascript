@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Exercícios DOM</title>
+	</head>
+	<style>
+		
+	</style>
+
+	<script>
+		/*
+		Here is a sample html file with a submit button. Write a JavaScript function to get the value of the href, hreflang, rel, target, and type attributes of the specified link.
+		*/
+
+		function getAttributes(){
+			let _href = document.getElementById("w3r").href
+			document.write(`<p><b>href:</b> ${_href}</p>`)
+
+			let _hreflang = document.getElementByTagName("a").hreflang
+			document.write(`<p><b>hreflang:</b> ${_hreflang}</p>`)
+
+			let _rel = document.getElementsByTagName("a").rel
+			document.write(`<p><b>rel:</b> ${_rel}</p>`)
+
+			let _target = document.getElementsByTagName("a").target
+			document.write(`<p><b>target:</b> ${_target}</p>`)
+
+			let _type = document.getElementsByTagName("a").type
+			document.write(`<p><b>target:</b> ${_type}</p>`)
+		}
+
+		
+	</script>
+
+	<body>
+		<h1>Exercícios com manipulação do DOM</h1>
+
+		<p><a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://www.w3resource.com/">w3resource</a></p>
+		<button onclick="getAttributes()">Click here to get  attributes value</button>		
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script>
+        // Exercício – Rotacionando vetor
+        // fonte: https://www.mundojs.com.br/2020/10/19/exercicio-rotacionando-vetor/
+
+        //FUNÇÕES
+        function gira(vetorAlfabeto){
+            let informeRotacao = prompt('Informe o número de rotações')
+            let Q = informeRotacao - 1
+
+            for(let i = 0; i <= Q; i++){
+                let varGirando = vetorAlfabeto[4]
+                vetorAlfabeto.pop()
+                vetorAlfabeto.unshift(varGirando)
+                console.log(`Girou: ${varGirando}`)
+            }
+
+            console.log(`Vator Alfabeto: ${vetorAlfabeto}`)
+        }
+
+        /*--------------------------------------------------*/
+
+        let vetorAlfabeto = ["A", "B", "C", "D", "E"]
+
+        gira(vetorAlfabeto)
+
+
+
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex2</title>
+	<script>
+		//fonte: http://www.decom.ufop.br/romildo/bcc221.2011-1/poo-1-classes.pdf
+
+		/*
+		Crie uma classe chamada Invoice que possa ser utilizado por uma loja de suprimentos de informática para representar uma fatura de um item vendido na loja. Uma fatura deve incluir as seguintes informações como atributos:
+
+		• o número do item faturado,
+		• a descrição do item,
+		• a quantidade comprada do item e
+		• o preço unitário do item.
+
+		Sua classe deve ter um construtor que inicialize os quatro atributos. Se a quantidade não for positiva, ela deve
+		ser configurada como 0. Se o preço por item não for positivo ele deve ser configurado como 0.0. Forneça
+		um método set e um método get para cada variável de instância. Além disso, forneça um método chamado
+		getInvoiceAmount que calcula o valor da fatura (isso é, multiplica a quantidade pelo preço por item) e
+		depois retorna o valor como um double. Escreva um aplicativo de teste que demonstra as capacidades da
+		classe Invoice.
+
+		*/
+
+
+		class Fatura{
+			construtor(){
+				this.numero = numero,
+				this.descricao = descricao,
+				this.quantidadeComprada = quantidadeComprada,
+				this.preco = preco
+			}
+
+			get numeroNovo(){
+				return this.numero;
+			}
+
+			set numeroNovo(esseNumero){
+				this.numero = esseNumero;
+			}
+
+			get descricaoNova(){
+				return this.descricao;
+			}
+
+			set descricaoNova(essaDescricao){
+				this.descricao = essaDescricao;
+			}
+
+			get quantidadeCompradaNova(){
+				return this.quantidadeComprada;
+			}
+
+			set quantidadeCompradaNova(essaQuantidadeComprada){
+				this.quantidadeComprada = essaQuantidadeComprada;
+			}
+
+			get precoNovo(){
+				return this.preco;
+			}
+
+			set precoNovo(essePreco){
+				this.preco = essePreco;
+			}
+
+		}
+
+		let item = new Fatura()
+
+		item.numeroNovo = 2
+		item.descricaoNova = "banana"
+		item.quantidadeCompradaNova = 10
+		item.precoNovo = 1.5
+
+		console.log(item)
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

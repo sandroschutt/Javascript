@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script>
+    // THIS
+    // this.atributo encapsula os dados de um objeto para que sejam acessíveis apenas dentro do escopo do objeto
+
+
+    // GET
+    // Pode ter um identificador do tipo numérico ou string.
+    // Não deve ter nenhum parâmetro.
+    // Não pode ser utilizado mais de um getter para uma mesma propriedade, assim como não pode haver uma propriedade comum com o mesmo nome do getter.
+
+    // usando get para recuperar o valor de um atributo de forma estática e retornar o dado solicitado através do método
+    // class Curso {
+    //     constructor(materia, professor, duracao){
+    //         this.materia = materia,
+    //         this.professor = professor,
+    //         this.duracao = duracao
+    //     }
+    //     get prof() {
+    //         return this.professor
+    //     }
+    // }
+
+    // let poo = new Curso('Programação orientada a objetos', 'Rafaella', '1 semestre')
+    // console.log(poo.prof) //Rafaella
+
+
+    // // usando get para recuperar valores de forma dinâmica
+    // class Boletim {
+    //     constructor(participacao, prova, trabalho){
+    //         this.participacao = participacao,
+    //         this.prova = prova,
+    //         this.trabalho = trabalho
+    //     }
+    //     get media() {
+    //         return parseInt((this.participacao + this.prova + this.trabalho) / 3)
+    //     }
+    // }
+
+    // let boletimSemestral = new Boletim(8, 6, 7.5)
+    // console.log(boletimSemestral.media) //7
+
+
+    // SET
+    // Pode ter um identificador do tipo numérico ou string.
+    // Deve ter exatamente um parâmetro.
+    // Não pode ter a mesma nomenclatura para propriedade e função.
+    // setters são utilizados para definirem valores para uma propriedade específica.
+
+    // class Aluno {
+    //     constructor(nome, curso, semestre){
+    //         this.nome = nome,
+    //         this.curso = curso,
+    //         this.semestre = semestre
+    //     }
+    //     set nomeAluno(nomeAluno) {
+    //         this.nome = nomeAluno
+    //     }
+    // }
+
+    // let lucas = new Aluno('Lucas', 'Engenharia', 5)
+    // lucas.nomeAluno = 'Pedro'
+    // console.log(lucas)
+
+    // Portanto, nesse caso podemos chamar o setter passando um parâmetro para alterar o valor da propriedade nome do aluno.
+
+
+
+
+    // TREINO
+    class Carro {
+        constructor(modelo, cor, ano){
+            this.modelo = modelo,
+            this.cor = cor,
+            this.ano = ano
+        }
+
+        set corCarro(corCarro) {
+            this.cor = corCarro
+        }
+
+        set modeloCarro(modeloCarro) {
+            this.modelo = modeloCarro
+        }
+
+        set anoCarro(anoCarro) {
+            this.ano = anoCarro
+        }
+    }
+
+    let carro = new Carro('Corsa', 'preto', 1998)
+    console.log(carro)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
