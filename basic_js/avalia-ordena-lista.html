@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Atividade 5</title>
+
+	<script>
+        alert('Abra o console para acompanhar as alterações no programa.')
+
+		var objetos = Array('Cadeira','Impressora','Garfo')
+
+		function recuperaValor() {
+			var recuperou = document.getElementById('recupera-valor').value
+			if(recuperou == '') {
+				// console.log('vazio')
+				alert('informe um valor válido!')
+			}
+
+			if(recuperou == objetos[0]) {
+				// console.log('valor: ' + recuperou)
+				console.log(recuperou + ' = ' + objetos[0])
+				alert(recuperou + ' já foi adicionado!')
+			}
+
+			else if(recuperou == objetos[1]) {
+				console.log(recuperou + ' = ' + objetos[1])
+				alert(recuperou + ' já foi adicionado!')
+			}
+
+			else if(recuperou == objetos[2]) {
+				console.log(recuperou + ' = ' + objetos[2])
+				alert(recuperou + ' já foi adicionado!')
+			}
+
+			else {
+				console.log(recuperou)
+				objetos.push(recuperou)
+			}
+
+			document.getElementById('recupera-valor').value = ''
+		}
+
+		function ordenaValores(objetos) {
+			objetos.sort()
+			alert('ordenado')
+            console.log('Lista ordenada:\n' + objetos)
+		}
+
+		console.log(objetos)
+
+	</script>
+</head>
+
+
+<body>
+	<input id="recupera-valor" type="text">
+	<button id="botao-recupera-valor" onclick="recuperaValor()">Adicionar</button>
+	<button id="ordena" onclick="ordenaValores(objetos)">Ordenar</button>
+</body>
+</html>

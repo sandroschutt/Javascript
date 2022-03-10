@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <meta charset="utf-8"> 
+    <title>JavaScript</title> 
+  
+    <script>
+
+      function alteraBgFoco() {
+        document.getElementById('entrada').style.backgroundColor = 'yellow'
+      }
+
+      function validaEntrada() {
+        var valorEntrada = 
+        document.getElementById('entrada').value
+        //console.log(valorEntrada)
+
+        if (valorEntrada.length < 3){
+          document.getElementById('entrada').style.backgroundColor = 'red'
+        }
+
+        if (valorEntrada.length >= 3){
+          document.getElementById('entrada').style.backgroundColor = 'green'
+        }
+      } 
+    </script> 
+  
+  </head> 
+  
+  <body>
+    <input type="text" onfocus="alteraBgFoco()" onblur="validaEntrada()" id="entrada">
+  </body> 
+</html> 
