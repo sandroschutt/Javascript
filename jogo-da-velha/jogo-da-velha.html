@@ -1,0 +1,63 @@
+<!-- 
+Jogo da Velha
+Afinal, quem nunca brincou de jogo da velha, riscando “círculos” e “x” com papel e caneta? No digital, a lógica do jogo continua a mesma: para ganhar, é preciso completar primeiro uma linha com 3 ícones seguidos, sejam eles na vertical, horizontal ou na diagonal. Além de divertido, fazer um jogo da velha utilizando o JavaScript te auxilia na estruturação de fluxogramas com resultados possíveis.
+
+Para isso, tente reproduzir as seguintes funções:
+– Diagonal
+– Vertical
+– Horizontal
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jogo-da-velha.js"></script>
+    <title>Jogo da Velha</title>
+
+    <style>
+        .table,
+        th,
+        td {
+            border-collapse: collapse;
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            font-weight: bold;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr id="t1">
+                <td onclick="setPosition(event)" id="p1"> </td>
+                <td onclick="setPosition(event)" id="p2"> </td>
+                <td onclick="setPosition(event)" id="p3"> </td>
+            </tr>
+            <tr>
+                <td onclick="setPosition(event)" id="p4"> </td>
+                <td onclick="setPosition(event)" id="p5"> </td>
+                <td onclick="setPosition(event)" id="p6"> </td>
+            </tr>
+            <tr>
+                <td onclick="setPosition(event)" id="p7"> </td>
+                <td onclick="setPosition(event)" id="p8"> </td>
+                <td onclick="setPosition(event)" id="p9"> </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
